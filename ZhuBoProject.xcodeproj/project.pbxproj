@@ -14,6 +14,7 @@
 		7374B0BB1ECBEED20036CA62 /* ZhuBoProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7374B0B91ECBEED20036CA62 /* ZhuBoProject.xcdatamodeld */; };
 		7374B0BD1ECBEED20036CA62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7374B0BC1ECBEED20036CA62 /* Assets.xcassets */; };
 		7374B0C01ECBEED20036CA62 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7374B0BE1ECBEED20036CA62 /* LaunchScreen.storyboard */; };
+		7BD65E0291E83ABEABEF9561 /* libPods-ZhuBoProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB1EDCD4A836BB7316CFAD23 /* libPods-ZhuBoProject.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,9 @@
 		7374B0BC1ECBEED20036CA62 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7374B0BF1ECBEED20036CA62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7374B0C11ECBEED20036CA62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB1EDCD4A836BB7316CFAD23 /* libPods-ZhuBoProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZhuBoProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDB65C4116017B31629AEA46 /* Pods-ZhuBoProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZhuBoProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZhuBoProject/Pods-ZhuBoProject.debug.xcconfig"; sourceTree = "<group>"; };
+		F0A89CD21DE26E903B6DD68D /* Pods-ZhuBoProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZhuBoProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZhuBoProject/Pods-ZhuBoProject.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +39,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BD65E0291E83ABEABEF9561 /* libPods-ZhuBoProject.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		61F7C6EB9AB098E9E8CAB6C2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EDB65C4116017B31629AEA46 /* Pods-ZhuBoProject.debug.xcconfig */,
+				F0A89CD21DE26E903B6DD68D /* Pods-ZhuBoProject.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		64111FFD7E8172473A4D7370 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EB1EDCD4A836BB7316CFAD23 /* libPods-ZhuBoProject.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7374B0A11ECBEED20036CA62 = {
 			isa = PBXGroup;
 			children = (
 				7374B0AC1ECBEED20036CA62 /* ZhuBoProject */,
 				7374B0AB1ECBEED20036CA62 /* Products */,
+				61F7C6EB9AB098E9E8CAB6C2 /* Pods */,
+				64111FFD7E8172473A4D7370 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -89,9 +113,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7374B0C41ECBEED20036CA62 /* Build configuration list for PBXNativeTarget "ZhuBoProject" */;
 			buildPhases = (
+				5F9F6DE2B67FA38726DD3F01 /* [CP] Check Pods Manifest.lock */,
 				7374B0A61ECBEED20036CA62 /* Sources */,
 				7374B0A71ECBEED20036CA62 /* Frameworks */,
 				7374B0A81ECBEED20036CA62 /* Resources */,
+				E55DC40E2C3532D27FB2BC98 /* [CP] Embed Pods Frameworks */,
+				E9247D57243C38D1444D59A5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -148,6 +175,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5F9F6DE2B67FA38726DD3F01 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E55DC40E2C3532D27FB2BC98 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZhuBoProject/Pods-ZhuBoProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E9247D57243C38D1444D59A5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZhuBoProject/Pods-ZhuBoProject-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7374B0A61ECBEED20036CA62 /* Sources */ = {
@@ -275,6 +350,7 @@
 		};
 		7374B0C51ECBEED20036CA62 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EDB65C4116017B31629AEA46 /* Pods-ZhuBoProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 39QNYYYY23;
@@ -287,6 +363,7 @@
 		};
 		7374B0C61ECBEED20036CA62 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0A89CD21DE26E903B6DD68D /* Pods-ZhuBoProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 39QNYYYY23;
